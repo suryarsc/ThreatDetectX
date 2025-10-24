@@ -33,7 +33,7 @@ datasets/ - sample datasets
 docs/ - documentation and architecture diagram
 
 ## Setup Instructions
-1. Clone repo: `git clone https://github.com/YOUR-USERNAME/ThreatDetectX.git`  
+1. Clone repo: `git clone https://github.com/suryarsc/ThreatDetectX.git`  
 2. Create Python virtual environment  
 3. Install dependencies from `backend/requirements.txt` and `dashboard/requirements.txt`  
 4. Deploy infrastructure using Terraform  
