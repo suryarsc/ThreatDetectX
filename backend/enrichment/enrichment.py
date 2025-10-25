@@ -1,3 +1,18 @@
+from dotenv import load_dotenv
+import os
+
+# Load environment variables from .env file
+load_dotenv()
+
+# Access the environment variables
+ABUSEIPDB_KEY = os.getenv("ABUSEIPDB_KEY")
+TDX_S3_BUCKET = os.getenv("TDX_S3_BUCKET")
+AWS_REGION = os.getenv("AWS_REGION")
+
+print("Environment loaded successfully.")
+print("S3 Bucket:", TDX_S3_BUCKET)
+print("Region:", AWS_REGION)
+
 def enrich_threats(anomalies):
     # Placeholder for threat intelligence enrichment
     for a in anomalies:
