@@ -1,0 +1,10 @@
+line-length = 110
+target-version = "py311"
+
+[lint]
+select = ["E", "F", "W", "I"]
+# E402: modules that adjust sys.path before importing (conftest, train script)
+ignore = ["E402"]
+
+[lint.per-file-ignores]
+"tests/*" = ["E501"]

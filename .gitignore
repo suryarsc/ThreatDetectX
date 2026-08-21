@@ -1,6 +1,44 @@
-__pycache__/ 
-.env 
-*.log 
-*.tfstate 
-*.tfstate.backup 
-node_modules/
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+backend/venv/
+backend/.venv/
+
+# Environment Variables & Secrets
+.env
+.env.*
+!.env.example
+
+# Logs and databases
+*.log
+*.sqlite3
+
+# OS / IDE files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Terraform
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+.terraform/
+.terraform.lock.hcl
+
+# Testing & Scratch Artifacts
+test_upload.txt
+backend/test_upload.txt
+.pytest_cache/
+.coverage
+htmlcov/

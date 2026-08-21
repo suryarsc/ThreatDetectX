@@ -1,0 +1,27 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    image: threatdetectx-backend
+    ports:
+      - "5000:5000"
+    environment:
+      - ABUSEIPDB_KEY=${ABUSEIPDB_KEY:-}
+      - TDX_S3_BUCKET=${TDX_S3_BUCKET:-}
+      - AWS_REGION=${AWS_REGION:-us-east-1}
+    restart: unless-stopped
+
+  dashboard:
+    build:
+      context: .
+      dockerfile: dashboard/Dockerfile
+    image: threatdetectx-dashboard
+    ports:
+      - "8501:8501"
+    depends_on:
+      - backend
+    # The dashboard reaches the API by the compose service name.
+    environment:
+      - BACKEND_URL=http://backend:5000
+    restart: unless-stopped

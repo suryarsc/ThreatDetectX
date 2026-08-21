@@ -1,5 +1,7 @@
-import boto3
 import os
+
+import boto3
+
 
 def s3_client():
     # boto3 automatically reads AWS env vars or ~/.aws/credentials
