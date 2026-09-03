@@ -29,6 +29,12 @@ Thumbs.db
 *.swp
 *.swo
 
+# Local editor settings (personal, not shared)
+settings.local.json
+
+# Personal / non-public docs
+docs/interview-playbook.html
+
 # Terraform
 *.tfstate
 *.tfstate.*
